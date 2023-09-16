@@ -31,8 +31,8 @@ function MobileHeader({ children }) {
 						leaveTo="translate-x-full"
 						as={Fragment}
 					>
-						<div className="fixed inset-0 flex h-screen w-screen flex-col items-center justify-start overflow-y-auto bg-neutral-800 text-cream">
-							<div className="flex min-h-full w-full flex-col items-center justify-start">
+						<div className="fixed inset-0 flex w-screen flex-col items-center justify-start overflow-y-auto bg-neutral-800 text-cream">
+							<div className="flex w-full flex-col items-center">
 								<Transition.Child
 									enter="transition-opacity delay-300 duration-1000"
 									enterFrom="opacity-0"
@@ -42,7 +42,7 @@ function MobileHeader({ children }) {
 									leaveTo="opacity-0"
 									as={Fragment}
 								>
-									<Dialog.Panel className="flex w-full flex-col items-center justify-start pb-8">
+									<Dialog.Panel className="flex min-h-screen w-full flex-col items-center justify-start pb-10">
 										<div className="flex w-full items-center justify-between px-6 py-8 md:px-8">
 											<div className="h-[54.28px] w-[50px] sm:h-[70.57px] sm:w-[65px] md:h-[81.43] md:w-[75px]"></div>
 											<button
