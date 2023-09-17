@@ -42,7 +42,7 @@ function MobileHeader({ children }) {
 									leaveTo="opacity-0"
 									as={Fragment}
 								>
-									<Dialog.Panel className="flex min-h-[100svh] w-full flex-col items-center justify-start pb-10">
+									<Dialog.Panel className="full-height flex w-full flex-col items-center justify-start pb-10">
 										<div className="flex w-full items-center justify-between px-6 py-8 md:px-8">
 											<div className="h-[54.28px] w-[50px] sm:h-[70.57px] sm:w-[65px] md:h-[81.43] md:w-[75px]"></div>
 											<button
