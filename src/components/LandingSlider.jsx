@@ -21,6 +21,7 @@ function LandingSlider() {
 				effect="fade"
 				crossFade="true"
 				parallax="true"
+				disableOnInteraction="false"
 			>
 				<swiper-slide className="h-screen">
 					<Slide img={Img1.src} title="Muntii Himalaya" />
