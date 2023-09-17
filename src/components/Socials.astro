@@ -2,10 +2,11 @@
 import { Image } from 'astro:assets'
 import facebookIcon from '../assets/facebook.svg'
 import instagramIcon from '../assets/insta.svg'
+import emailIcon from '../assets/email.svg'
 ---
 
 <div
-	class="fixed bottom-8 left-0 right-0 mx-auto grid max-w-xs grid-cols-3 place-content-center justify-items-center gap-6 sm:left-auto sm:right-6 sm:mx-0 sm:ml-6 md:right-8 md:ml-8"
+	class="fixed bottom-8 left-0 right-0 z-10 mx-auto flex items-center justify-center gap-10 sm:left-auto sm:right-6 sm:mx-0 sm:ml-6 md:right-8 md:ml-8"
 >
 	<a href="/"
 		><Image
@@ -21,20 +22,11 @@ import instagramIcon from '../assets/insta.svg'
 			class="block w-7 transition-all duration-500 hover:scale-125 focus-visible:scale-125"
 		/></a
 	>
-	<a href="/" aria-label="mail icon"
-		><svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke-width="1.5"
-			stroke="currentColor"
-			class="block h-7 w-7 text-cream transition-all duration-500 hover:scale-125 focus-visible:scale-125"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-			></path>
-		</svg></a
-	>
+	<a href="/"
+		><Image
+			src={emailIcon}
+			alt="email icon"
+			class="block w-7 transition-all duration-500 hover:scale-125 focus-visible:scale-125"
+		/>
+	</a>
 </div>

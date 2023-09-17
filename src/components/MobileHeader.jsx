@@ -31,7 +31,7 @@ function MobileHeader({ children }) {
 						leaveTo="translate-x-full"
 						as={Fragment}
 					>
-						<div className="fixed inset-0 flex w-screen flex-col items-center justify-start overflow-y-auto bg-neutral-800 text-cream">
+						<div className="fixed inset-0 z-10 flex w-screen flex-col items-center justify-start overflow-y-auto bg-neutral-800 text-cream">
 							<div className="flex w-full flex-col items-center">
 								<Transition.Child
 									enter="transition-opacity delay-300 duration-1000"

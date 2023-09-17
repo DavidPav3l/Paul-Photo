@@ -11,7 +11,7 @@ function LandingSlider() {
 	const swiperElRef = useRef(null)
 
 	return (
-		<div className="absolute inset-0 isolate -z-10 min-h-screen w-full">
+		<div className="absolute inset-0 min-h-screen w-full">
 			<swiper-container
 				ref={swiperElRef}
 				centered-slides="true"

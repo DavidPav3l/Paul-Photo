@@ -46,5 +46,21 @@ const { title } = Astro.props
 		focusableElementsOffsetY: 15,
 		focusableElementsOffsetX: 10
 	}
-	new Blobity(options)
+
+	let blobity = null
+
+	const mediaQuery = window.matchMedia('(min-width: 1024px)')
+
+	if (mediaQuery.matches && blobity == null) {
+		blobity = new Blobity(options)
+	}
+
+	mediaQuery.onchange = (e) => {
+		if (e.matches && blobity == null) {
+			blobity = new Blobity(options)
+		} else if (!e.matches && blobity != null) {
+			blobity.destroy()
+			blobity = null
+		}
+	}
 </script>
