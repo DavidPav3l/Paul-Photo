@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+import { readdir } from 'fs/promises'
+import path from 'path'
+
+const getDirectories = async (source) =>
+	(await readdir(source, { withFileTypes: true }))
+		.filter((dirent) => dirent.isDirectory())
+		.map((dirent) => dirent.name)
+let relativePath = './src/poze-site/portofoliu'
+let absolutePath = path.resolve(relativePath)
+let directories = await getDirectories(absolutePath)
+
+const links = directories.map((dir) => {
+	return {
+		url: '/portofoliu/' + dir
+	}
+})
+
+const allImgs = await Astro.glob('../../poze-site/portofoliu/**/*')
+---
+
+<Layout title="Paul Clapa | Portofoliu">
+	<!-- {
+		allImgs.map((cacuta) => {
+			return <img src={cacuta.default.src} alt={cacuta.url} />
+		})
+	} -->
+	<!-- {
+		links.map((el) => {
+			return <a href={el.url} >Bla Bla</a>
+		})
+	} -->
+</Layout>

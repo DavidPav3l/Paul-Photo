@@ -11,7 +11,7 @@ function LandingSlider() {
 	const swiperElRef = useRef(null)
 
 	return (
-		<div className="absolute inset-0 min-h-screen w-full">
+		<div className="pointer-events-none absolute inset-0 -z-30 min-h-screen w-full">
 			<swiper-container
 				ref={swiperElRef}
 				centered-slides="true"
@@ -21,7 +21,8 @@ function LandingSlider() {
 				effect="fade"
 				crossFade="true"
 				parallax="true"
-				disableOnInteraction="false"
+				allow-touch-move="false"
+				autoplay-disable-on-interaction="false"
 			>
 				<swiper-slide className="h-screen">
 					<Slide img={Img1.src} title="Muntii Himalaya" />
