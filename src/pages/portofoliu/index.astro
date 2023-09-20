@@ -26,7 +26,13 @@ const allImgs = await Astro.glob('../../poze-site/portofoliu/**/*')
 <Layout title="Paul Clapa | Portofoliu">
 	<main class="flex flex-col items-center justify-start">
 		<div class="mx-auto flex w-[90%] items-center justify-start gap-8 overflow-x-auto px-5 py-4">
-			{
+			<a
+				data-blobity-focus
+				class="rounded-3xl border border-cream px-6 py-2.5 font-medium lg:border-none lg:py-0.5"
+				href="/portofoliu"
+			>
+				toate
+			</a>{
 				links.map((el) => {
 					return (
 						<a
@@ -45,7 +51,11 @@ const allImgs = await Astro.glob('../../poze-site/portofoliu/**/*')
 				allImgs.map((img) => {
 					return (
 						<div class="box">
-							<Image src={img.default} alt="Imagine portofoliu" class="max-w-full rounded-xl" />
+							<Image
+								src={img.default}
+								alt="Imagine portofoliu"
+								class="max-w-full rounded-xl border-2 border-neutral-800 transition-all duration-1000 hover:scale-105 hover:border-white"
+							/>
 						</div>
 					)
 				})
