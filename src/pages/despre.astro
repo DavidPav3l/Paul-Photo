@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '../layouts/Layout.astro'
+import descriptionBackground from '../assets/descp-background.webp'
+import paulClapaPhoto from '../assets/paul-clapa.webp'
+---
+
+<style>
+	.blob {
+		border-radius: 20% 80% 17% 83% / 45% 46% 54% 55%;
+	}
+</style>
+
+<Layout title="Despre | Paul Clapa">
+	<main class="w-full">
+		<section class="flex min-h-screen w-full flex-col items-center justify-center">
+			<div class="relative flex flex-col items-center justify-center">
+				<h1 class="text-center text-5xl font-light">
+					DESPRE
+					<span class="whitespace-nowrap text-3xl font-semibold">Paul Clapa</span>
+				</h1>
+			</div>
+			<Image
+				src={paulClapaPhoto}
+				alt="Paul Clapa"
+				width="2041"
+				height="2041"
+				class="blob z-10 w-[80%] max-w-[32rem] shadow-2xl shadow-neutral-950"
+			/>
+			<!-- <h1 class="absolute left-44 top-5 font-MontSerrat text-6xl font-light">
+					DESPRE
+					<br />
+					<span class="ml-[5rem] whitespace-nowrap text-5xl font-semibold">Paul Clapa</span>
+				</h1> -->
+		</section>
+	</main>
+	<!-- <main class="flex min-h-screen w-full flex-col items-center justify-center">
+		<section class="relative flex min-h-screen w-full items-center justify-center gap-24">
+			<Image
+				src={descriptionBackground}
+				alt="mountain image"
+				width="2048"
+				height="1536"
+				class="absolute -z-10 h-screen w-full bg-cover bg-center opacity-20"
+			/>
+			<div class="relative">
+				<Image
+					src={paulClapaPhoto}
+					alt="Paul Clapa"
+					width="2041"
+					height="2041"
+					class="blob z-10 h-[32rem] w-[32rem] shadow-2xl shadow-neutral-950"
+				/>
+				<h1 class="absolute left-44 top-5 font-MontSerrat text-6xl font-light">
+					DESPRE
+					<br />
+					<span class="ml-[5rem] whitespace-nowrap text-5xl font-semibold">Paul Clapa</span>
+				</h1>
+			</div>
+			<div class="mt-10 max-w-2xl">
+				<p class="indent-8">
+					Imaginile cu natura în diversele ei manifestări, precum și cele cu oamenii și locurile
+					lor, m-au atras din copilărie când răsfoiam diverse atlasuri și când urmăream la TVR
+					celebra <span class="italic">Teleenciclopedia</span>, iar apoi pasiunea pentru fotografie
+					a început într-o școală care ne-a oferit lecții de fotografiat cu aparate pe film Zenit,
+					Pentax. Pasiunea s-a dezvoltat după ce am început să experimentez cu aparatele digitale și
+					să descopăr, chiar să cunosc, fotografi excepționali din România.
+				</p>
+				<br />
+				<p class="indent-8">
+					Sunt atras de peisaje, de măreția munților, de misterul pe care-l afișează pădurile și de
+					aceea, prin fotografiile mele, încerc să prezint aceste subiecte așa cum le-am simțit
+					eu...minunate, impresionante, uneori simple, alteori pline de mister sau de povești.
+				</p>
+				<br />
+				<p class="indent-8">
+					Deși sunt orientat de mai mult timp și pe domeniul fotografiei de portret, aici
+					dezvoltarea are loc treptat, pentru că a fotografia oameni implică de multe ori și
+					cunoașterea lor și îmi place să mă concentrez spre surprinderea unor momente care exprimă
+					stări, emoții, contexte de viață.
+				</p>
+			</div>
+		</section>
+	</main> -->
+</Layout>

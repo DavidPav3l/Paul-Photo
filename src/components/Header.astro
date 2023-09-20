@@ -6,7 +6,7 @@ import MobileHeader from '../components/MobileHeader'
 ---
 
 <header
-	class="absolute left-0 top-0 isolate z-10 flex w-full items-center justify-between px-6 py-8 md:px-8"
+	class="relative isolate z-10 flex w-full items-center justify-between bg-transparent px-6 py-8 md:px-8"
 >
 	<a href="/"><Image src={Logo} alt="Wolf Logo" width={65} class="w-[50px] sm:w-[65px]" /></a>
 	<nav class="hidden md:block">
@@ -14,7 +14,7 @@ import MobileHeader from '../components/MobileHeader'
 			<Link dim="95px" text="portofoliu" />
 			<Link dim="75px" text="tablouri" />
 			<Link dim="75px" text="albume" />
-			<Link dim="125px" text="despre mine" />
+			<Link dim="125px" text="despre mine" location="/despre/" />
 		</ul>
 	</nav>
 	<div class="flex md:hidden">
@@ -22,7 +22,7 @@ import MobileHeader from '../components/MobileHeader'
 			<Link text="portofoliu" />
 			<Link text="tablouri" />
 			<Link text="albume" />
-			<Link text="despre mine" />
+			<Link text="despre mine" location="/despre/" />
 		</MobileHeader>
 	</div>
 </header>
