@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro'
+import { Image } from 'astro:assets'
 
 import { readdir } from 'fs/promises'
 import path from 'path'
@@ -14,7 +15,8 @@ let directories = await getDirectories(absolutePath)
 
 const links = directories.map((dir) => {
 	return {
-		url: '/portofoliu/' + dir
+		url: '/portofoliu/' + dir,
+		name: dir
 	}
 })
 
@@ -22,14 +24,56 @@ const allImgs = await Astro.glob('../../poze-site/portofoliu/**/*')
 ---
 
 <Layout title="Paul Clapa | Portofoliu">
-	<!-- {
-		allImgs.map((cacuta) => {
-			return <img src={cacuta.default.src} alt={cacuta.url} />
-		})
-	} -->
-	<!-- {
-		links.map((el) => {
-			return <a href={el.url} >Bla Bla</a>
-		})
-	} -->
+	<main class="flex flex-col items-center justify-start">
+		<div class="mx-auto flex w-[90%] items-center justify-start gap-8 overflow-x-auto px-5 py-4">
+			{
+				links.map((el) => {
+					return (
+						<a
+							data-blobity-focus
+							class="rounded-3xl border border-cream px-6 py-2.5 font-medium lg:border-none lg:py-0.5"
+							href={el.url}
+						>
+							{el.name}
+						</a>
+					)
+				})
+			}
+		</div>
+		<section class="containery py-8">
+			{
+				allImgs.map((img) => {
+					return (
+						<div class="box">
+							<Image src={img.default} alt="Imagine portofoliu" class="max-w-full rounded-xl" />
+						</div>
+					)
+				})
+			}
+		</section>
+	</main>
 </Layout>
+
+<style>
+	.containery {
+		columns: 1;
+		column-gap: 40px;
+		width: 90%;
+		@apply mx-auto;
+	}
+	.box {
+		width: 100%;
+		break-inside: avoid;
+		margin-bottom: 30px;
+	}
+	@media (min-width: 864px) {
+		.containery {
+			columns: 2;
+		}
+	}
+	@media (min-width: 1536px) {
+		.containery {
+			columns: 3;
+		}
+	}
+</style>
