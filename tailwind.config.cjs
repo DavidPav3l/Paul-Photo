@@ -9,6 +9,9 @@ module.exports = {
 			},
 			colors: {
 				cream: '#f5eddf'
+			},
+			screens: {
+				xs: '375px'
 			}
 		}
 	},
