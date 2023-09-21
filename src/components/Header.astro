@@ -11,18 +11,18 @@ import MobileHeader from '../components/MobileHeader'
 	<a href="/"><Image src={Logo} alt="Wolf Logo" width={65} class="w-[50px] sm:w-[65px]" /></a>
 	<nav class="hidden md:block">
 		<ul class="flex items-center justify-start gap-10">
-			<Link dim="95px" text="portofoliu" />
-			<Link dim="75px" text="tablouri" />
-			<Link dim="75px" text="albume" />
-			<Link dim="125px" text="despre mine" location="/despre/" />
+			<Link dim="95px" text="portofoliu" location="/portofoliu" />
+			<Link dim="75px" text="tablouri" location="/tablouri" />
+			<Link dim="75px" text="albume" location="/albume" />
+			<Link dim="125px" text="despre mine" location="/despre" />
 		</ul>
 	</nav>
 	<div class="flex md:hidden">
 		<MobileHeader client:visible>
-			<Link text="portofoliu" />
-			<Link text="tablouri" />
-			<Link text="albume" />
-			<Link text="despre mine" location="/despre/" />
+			<Link text="portofoliu" location="/portofoliu" />
+			<Link text="tablouri" location="/tablouri" />
+			<Link text="albume" location="/albume" />
+			<Link text="despre mine" location="/despre" />
 		</MobileHeader>
 	</div>
 </header>
