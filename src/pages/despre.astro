@@ -5,7 +5,6 @@ import ReadMore from '../components/DescriptionParfs.jsx'
 import MoreText from '../components/MoreText.astro'
 import descriptionBackground from '../assets/description-background.jpg'
 import paulClapaPhoto from '../assets/paul-clapa.webp'
-import { sequence } from 'astro:middleware'
 ---
 
 <style>
@@ -29,10 +28,10 @@ import { sequence } from 'astro:middleware'
 				height="1536"
 				class="absolute inset-0 -z-10 hidden h-full w-full bg-cover bg-center opacity-20 lg:block"
 			/>
-			<h1 class="xs:text-6xl text-center text-5xl font-light sm:hidden">
+			<h1 class="text-center text-5xl font-light xs:text-6xl sm:hidden">
 				DESPRE
 				<br />
-				<span class="xs:text-4xl whitespace-nowrap text-3xl font-semibold">Paul Clapa</span>
+				<span class="whitespace-nowrap text-3xl font-semibold xs:text-4xl">Paul Clapa</span>
 			</h1>
 			<div class="relative flex items-center justify-center">
 				<Image
