@@ -2,15 +2,13 @@
 import { Image } from 'astro:assets'
 import Layout from '../layouts/Layout.astro'
 import ReadMore from '../components/DescriptionParfs.jsx'
-import MoreText from '../components/MoreText.astro'
+import MoreText from '../components/MoreText.jsx'
 import descriptionBackground from '../assets/description-background.jpg'
 import paulClapaPhoto from '../assets/paul-clapa.webp'
+import AboutBlob from '../components/AboutBlob.astro'
 ---
 
 <style>
-	.blob {
-		border-radius: 20% 80% 17% 83% / 45% 46% 54% 55%;
-	}
 	.descriere {
 		min-height: calc(100vh - 134.58px);
 	}
@@ -24,8 +22,8 @@ import paulClapaPhoto from '../assets/paul-clapa.webp'
 			<Image
 				src={descriptionBackground}
 				alt="mountain image"
-				width="2048"
-				height="1536"
+				width="640"
+				height="480"
 				class="absolute inset-0 -z-10 hidden h-full w-full bg-cover bg-center opacity-20 lg:block"
 			/>
 			<h1 class="text-center text-5xl font-light xs:text-6xl sm:hidden">
@@ -33,76 +31,8 @@ import paulClapaPhoto from '../assets/paul-clapa.webp'
 				<br />
 				<span class="whitespace-nowrap text-3xl font-semibold xs:text-4xl">Paul Clapa</span>
 			</h1>
-			<div class="relative flex items-center justify-center">
-				<Image
-					src={paulClapaPhoto}
-					alt="Paul Clapa"
-					width="2041"
-					height="2041"
-					class="blob z-10 w-[80%] max-w-[30rem] shadow-2xl shadow-neutral-950 xl:w-[32rem]"
-				/>
-				<h1
-					class="absolute -top-[10%] left-[25%] z-10 hidden font-MontSerrat text-6xl font-light sm:block lg:text-5xl xl:-top-[5%] xl:text-6xl"
-				>
-					DESPRE
-					<br />
-					<span class="ml-[5rem] whitespace-nowrap text-5xl font-semibold lg:text-4xl xl:text-5xl"
-						>Paul Clapa</span
-					>
-				</h1>
-			</div>
-			<ReadMore client:load>
-				<MoreText />
-			</ReadMore>
-
-			<!-- <main class="flex min-h-screen w-full flex-col items-center justify-center">
-		<section class="relative flex min-h-screen w-full items-center justify-center gap-24">
-			<Image
-				src={descriptionBackground}
-				alt="mountain image"
-				width="2048"
-				height="1536"
-				class="absolute -z-10 h-screen w-full bg-cover bg-center opacity-20"
-			/>
-			<div class="relative">
-				<Image
-					src={paulClapaPhoto}
-					alt="Paul Clapa"
-					width="2041"
-					height="2041"
-					class="blob z-10 h-[32rem] w-[32rem] shadow-2xl shadow-neutral-950"
-				/>
-				<h1 class="absolute left-44 top-5 font-MontSerrat text-6xl font-light">
-					DESPRE
-					<br />
-					<span class="ml-[5rem] whitespace-nowrap text-5xl font-semibold">Paul Clapa</span>
-				</h1>
-			</div>
-			<div class="mt-10 max-w-2xl">
-				<p class="indent-8">
-					Imaginile cu natura în diversele ei manifestări, precum și cele cu oamenii și locurile
-					lor, m-au atras din copilărie când răsfoiam diverse atlasuri și când urmăream la TVR
-					celebra <span class="italic">Teleenciclopedia</span>, iar apoi pasiunea pentru fotografie
-					a început într-o școală care ne-a oferit lecții de fotografiat cu aparate pe film Zenit,
-					Pentax. Pasiunea s-a dezvoltat după ce am început să experimentez cu aparatele digitale și
-					să descopăr, chiar să cunosc, fotografi excepționali din România.
-				</p>
-				<br />
-				<p class="indent-8">
-					Sunt atras de peisaje, de măreția munților, de misterul pe care-l afișează pădurile și de
-					aceea, prin fotografiile mele, încerc să prezint aceste subiecte așa cum le-am simțit
-					eu...minunate, impresionante, uneori simple, alteori pline de mister sau de povești.
-				</p>
-				<br />
-				<p class="indent-8">
-					Deși sunt orientat de mai mult timp și pe domeniul fotografiei de portret, aici
-					dezvoltarea are loc treptat, pentru că a fotografia oameni implică de multe ori și
-					cunoașterea lor și îmi place să mă concentrez spre surprinderea unor momente care exprimă
-					stări, emoții, contexte de viață.
-				</p>
-			</div>
-		</section>
-	</main> -->
+			<AboutBlob />
+			<ReadMore client:only />
 		</section>
 	</main>
 </Layout>
