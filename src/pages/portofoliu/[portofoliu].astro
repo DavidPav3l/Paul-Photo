@@ -25,9 +25,7 @@ const { name } = Astro.props
 
 const allImgs = await Astro.glob('../../poze-site/portofoliu/**/*')
 
-const filteredImgs = allImgs.filter((img) => {
-	return img.default.src.includes(name)
-})
+console.log(allImgs)
 
 const getDirectories = async (source) =>
 	(await readdir(source, { withFileTypes: true }))
@@ -37,12 +35,38 @@ let relativePath = './src/poze-site/portofoliu'
 let absolutePath = path.resolve(relativePath)
 let directories = await getDirectories(absolutePath)
 
+const getFiles = async (source) =>
+	(await readdir(source, { withFileTypes: true }))
+		.filter((dirent) => dirent.isFile())
+		.map((dirent) => dirent.name)
+
+let relativePath2 = './src/poze-site/portofoliu/' + portofoliu
+let absolutePath2 = path.resolve(relativePath2)
+
+const files = await getFiles(absolutePath2)
+
+const formatedFiles = files.map((file) => {
+	return file.split('.')[0]
+})
+
+console.log(files)
+
 const links = directories.map((dir) => {
 	return {
 		url: '/portofoliu/' + dir,
 		name: dir
 	}
 })
+
+const imgs = allImgs.filter((img) => {
+	for (let i = 0; i < formatedFiles.length; i++) {
+		if (img.default.src.includes(formatedFiles[i])) {
+			return img
+		}
+	}
+})
+
+console.log(imgs)
 ---
 
 <Layout title="Paul Clapa | Portofoliu">
@@ -71,7 +95,7 @@ const links = directories.map((dir) => {
 		</div>
 		<section class="containery py-8">
 			{
-				filteredImgs.map((img) => {
+				imgs.map((img) => {
 					return (
 						<div class="box">
 							<Image
