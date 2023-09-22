@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-import { Image } from 'astro:assets'
+import Gallery from '../../components/Gallery.astro'
 
 import { getPages, getFiles } from '../../utils/fileUtils'
 
@@ -47,81 +47,6 @@ const imgs = allImgs.filter((img) => {
 })
 ---
 
-<Layout title="Paul Clapa | Portofoliu">
-	<main class="flex flex-col items-center justify-start">
-		<div class="mx-auto flex w-[90%] flex-col items-start justify-start gap-6 px-5 py-4 lg:gap-8">
-			<h2 class="text-4xl font-light uppercase lg:ml-6 lg:text-5xl">Filtre</h2>
-			<div
-				class="flex w-full items-center justify-start gap-6 overflow-x-auto overflow-y-hidden lg:gap-8"
-			>
-				<a
-					data-blobity-focus
-					class="rounded-xl border border-cream px-6 py-2.5 font-medium lg:border-none lg:py-0.5"
-					href="/portofoliu"
-				>
-					toate
-				</a>{
-					links.map((el) => {
-						return (
-							<a
-								data-blobity-focus
-								class="rounded-xl border border-cream px-6 py-2.5 font-medium lg:border-none lg:py-0.5"
-								href={el.url}
-							>
-								{el.name}
-							</a>
-						)
-					})
-				}
-			</div>
-		</div>
-		<div class="relative isolate my-16 h-[1.2px] w-full bg-cream">
-			<span
-				class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 bg-neutral-800 px-4 py-1 text-3xl font-light uppercase lg:text-4xl"
-				>{portofoliu}</span
-			>
-		</div>
-		<section class="containery py-8">
-			{
-				imgs.map((img) => {
-					return (
-						<a data-fslightbox href={img.default.src} class="box block">
-							<Image
-								src={img.default}
-								quality="mid"
-								alt="Imagine portofoliu"
-								class="max-w-full rounded-xl border-2 border-neutral-800 transition-all duration-1000 hover:scale-105 hover:border-white"
-							/>
-						</a>
-					)
-				})
-			}
-		</section>
-	</main>
+<Layout title={`Paul Clapa | Portofoliu ${portofoliu}`}>
+	<Gallery allImgs={imgs} links={links} title={portofoliu} />
 </Layout>
-
-<script src="/fslightbox.js" is:inline></script>
-
-<style>
-	.containery {
-		columns: 1;
-		column-gap: 40px;
-		width: 90%;
-		@apply mx-auto;
-	}
-	.box {
-		width: 100%;
-		break-inside: avoid;
-		margin-bottom: 30px;
-	}
-	@media (min-width: 864px) {
-		.containery {
-			columns: 2;
-		}
-	}
-	@media (min-width: 1536px) {
-		.containery {
-			columns: 3;
-		}
-	}
-</style>
