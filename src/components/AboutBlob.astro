@@ -13,12 +13,11 @@ import { Image } from 'astro:assets'
 	<Image
 		src={paulClapaPhoto}
 		alt="Paul Clapa"
-		width="400"
-		height="400"
-		class="blob z-10 w-[80%] max-w-[30rem] shadow-2xl shadow-neutral-950"
+		loading="eager"
+		class="blob z-10 my-8 w-[80%] max-w-[450px] shadow-2xl shadow-neutral-950 lg:max-w-[550px]"
 	/>
 	<h1
-		class="absolute -top-[10%] left-[25%] z-10 hidden font-MontSerrat text-6xl font-light sm:block lg:-top-[5%] lg:text-5xl xl:-top-[8%] xl:left-[30%] xl:text-6xl"
+		class="absolute left-[30%] top-0 z-10 hidden font-MontSerrat text-6xl font-light sm:block lg:top-[2%] lg:text-5xl xl:left-[30%] xl:text-6xl"
 	>
 		DESPRE
 		<br />

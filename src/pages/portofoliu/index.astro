@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import { Image } from 'astro:assets'
+import Header from '../../components/Header.astro'
 
 import { getPages } from '../../utils/fileUtils'
 
@@ -19,6 +20,7 @@ const allImgs = await Astro.glob('../../poze-site/portofoliu/**/*')
 ---
 
 <Layout title="Paul Clapa | Portofoliu">
+	<Header />
 	<main class="flex flex-col items-center justify-start">
 		<div class="mx-auto flex w-[90%] flex-col items-start justify-start gap-6 px-5 py-4 lg:gap-8">
 			<h2 class="text-4xl font-light uppercase lg:ml-6 lg:text-5xl">Filtre</h2>
