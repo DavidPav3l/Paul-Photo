@@ -46,7 +46,7 @@ const { links, allImgs, title } = Astro.props
 							src={img.default}
 							quality="mid"
 							alt="Imagine portofoliu"
-							class="max-w-full rounded-xl border-2 border-neutral-800 transition-all duration-1000 hover:scale-105 hover:border-white"
+							class="max-w-full rounded-lg border-2 border-neutral-800 transition-all duration-1000 hover:scale-105 hover:border-white"
 						/>
 					</a>
 				)
@@ -64,14 +64,14 @@ const { links, allImgs, title } = Astro.props
 
 	.containery {
 		columns: 1;
-		column-gap: 40px;
+		column-gap: 20px;
 		width: 90%;
 		@apply mx-auto;
 	}
 	.box {
 		width: 100%;
 		break-inside: avoid;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 	@media (min-width: 864px) {
 		.containery {
