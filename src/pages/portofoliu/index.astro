@@ -1,9 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-
-import Gallery from '../../components/Gallery.astro'
-
+import Header from '../../components/Header.astro'
 import { getPages } from '../../utils/fileUtils'
+import Gallery from '../../components/Gallery.astro'
 
 const relativePath = './src/poze-site/portofoliu'
 
@@ -20,5 +19,6 @@ const allImgs = await Astro.glob('../../poze-site/portofoliu/**/*')
 ---
 
 <Layout title="Paul Clapa | Portofoliu">
+	<Header />
 	<Gallery links={links} allImgs={allImgs} title="toate" />
 </Layout>

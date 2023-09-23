@@ -1,36 +1,47 @@
 ---
 import { Image } from 'astro:assets'
 import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
 import ReadMore from '../components/DescriptionParfs.jsx'
-import descriptionBackground from '../assets/description-background.jpg'
 import AboutBlob from '../components/AboutBlob.astro'
 ---
 
 <style>
-	.descriere {
-		min-height: calc(100vh - 134.58px);
+	.in-need-of-bg {
+		border-color: linear-gradient(
+			90deg,
+			rgba(245, 237, 223, 1) 0%,
+			rgba(38, 38, 38, 1) 50%,
+			rgba(245, 237, 223, 1) 100%
+		);
+	}
+	.dimensiune {
+		min-height: calc(80vh - 134.58px);
+	}
+	@media (min-width: 1024px) {
+		.in-need-of-bg {
+			background-image: url('../assets/description-background.webp');
+		}
 	}
 </style>
 
 <Layout title="Despre | Paul Clapa">
-	<main>
-		<section
-			class="descriere flex w-full flex-col items-center gap-5 pt-[10vh] lg:flex-row lg:justify-center lg:px-8 lg:pt-0"
+	<section
+		class="in-need-of-bg relative min-h-[80vh] w-full bg-cover bg-fixed bg-bottom lg:border-b-2"
+	>
+		<Header />
+		<div class="absolute inset-0 z-[5] bg-neutral-800 bg-opacity-80"></div>
+		<div
+			class="dimensiune z-10 flex w-full flex-col items-center gap-5 pt-[100px] lg:flex-row lg:justify-center lg:px-8 lg:pt-0"
 		>
-			<Image
-				src={descriptionBackground}
-				alt="mountain image"
-				width="640"
-				height="480"
-				class="absolute inset-0 -z-10 hidden h-full w-full bg-cover bg-center opacity-20 lg:block"
-			/>
-			<h1 class="text-center text-5xl font-light xs:text-6xl sm:hidden">
+			<h1 class="z-10 text-center text-5xl font-light xs:text-6xl sm:hidden">
 				DESPRE
 				<br />
 				<span class="whitespace-nowrap text-3xl font-semibold xs:text-4xl">Paul Clapa</span>
 			</h1>
 			<AboutBlob />
-			<ReadMore client:load />
-		</section>
-	</main>
+			<ReadMore client:only />
+		</div>
+	</section>
+	<section class="min-h-screen"></section>
 </Layout>
