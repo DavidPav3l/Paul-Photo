@@ -6,7 +6,7 @@ const { links, allImgs, title } = Astro.props
 
 <main class="flex flex-col items-center justify-start">
 	<div class="mx-auto flex w-[90%] flex-col items-start justify-start gap-6 px-5 py-4 lg:gap-8">
-		<h2 class="text-4xl font-light uppercase lg:ml-6 lg:text-5xl">Filtre</h2>
+		<h2 class="relative isolate text-4xl font-light uppercase lg:ml-6 lg:text-5xl">Filtre</h2>
 		<div
 			class="flex w-full items-center justify-start gap-6 overflow-x-auto overflow-y-hidden lg:gap-8"
 		>
@@ -31,9 +31,9 @@ const { links, allImgs, title } = Astro.props
 			}
 		</div>
 	</div>
-	<div class="relative isolate my-16 h-[1.2px] w-full bg-cream">
+	<div class="line relative isolate my-12 h-[1.2px] w-full rounded-lg">
 		<span
-			class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 bg-neutral-800 px-4 py-1 text-3xl font-light uppercase lg:text-4xl"
+			class="absolute left-1/2 top-1/2 isolate z-10 -translate-x-1/2 -translate-y-1/2 bg-neutral-800 px-4 py-1 text-3xl font-light uppercase lg:px-6 lg:text-4xl"
 			>{title}</span
 		>
 	</div>
@@ -58,6 +58,10 @@ const { links, allImgs, title } = Astro.props
 <script src="/fslightbox.js" is:inline></script>
 
 <style>
+	.line {
+		background-image: radial-gradient(circle, rgb(245 237 223) 28%, rgb(38 38 38));
+	}
+
 	.containery {
 		columns: 1;
 		column-gap: 40px;
