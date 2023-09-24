@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Transition } from '@headlessui/react'
 import MoreText from './MoreText'
 
 export default function ReadMore() {

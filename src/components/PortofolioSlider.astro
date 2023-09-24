@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets'
+const photos = await Astro.glob('../poze-site/tablouri/*')
+---
+
+<div
+	class="swiper h-[400px] w-full max-w-4xl rounded-lg shadow-2xl shadow-neutral-950 lg:h-[650px]"
+>
+	<div class="swiper-wrapper h-full w-full rounded-lg">
+		{
+			photos.map((photo) => (
+				<div class="swiper-slide h-full w-full  rounded-lg">
+					<Image src={photo.default} class="h-full w-full object-cover object-top" alt="Tablou" />
+				</div>
+			))
+		}
+	</div><div class="swiper-pagination bg-cream"></div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script is:inline>
+	new Swiper('.swiper', {
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'progressbar'
+		}
+	})
+</script>
+
+<style is:global>
+	.swiper-pagination-progressbar-fill {
+		background-color: #f5eddf !important;
+	}
+</style>
