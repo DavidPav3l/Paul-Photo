@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import { Image } from 'astro:assets'
 import foto from '../assets/25Plecăciune800x1000.jpg'
-
+import AbsoluteOverPhoto from '../components/AbsoluteOverPhoto.astro'
 import PortofolioSlider from '../components/PortofolioSlider.astro'
 import Socials from '../components/Socials.astro'
 ---
@@ -35,23 +35,14 @@ import Socials from '../components/Socials.astro'
 				pagina mea de facebook</a
 			>.
 		</p>
-		<div
-			class="relative w-full max-w-[360px] shadow-2xl shadow-neutral-950 sm:w-[50%] lg:w-[45%] lg:max-w-md xl:w-[40%] xl:max-w-lg"
-		>
-			<h1
-				class="absolute -top-6 left-1/2 -translate-x-1/2 text-5xl font-medium sm:-left-16 sm:top-3 sm:translate-x-0 sm:text-6xl lg:-left-20 lg:text-7xl 2xl:-left-28 2xl:text-8xl"
-			>
-				Tablouri
-			</h1>
-			<Image src={foto} class="w-full rounded border-cream" alt="Camera cu tablou" />
-		</div>
+		<AbsoluteOverPhoto foto={foto} title="Tablouri" />
 	</section>
 	<div class="line my-12 h-[1.2px] w-full rounded-lg"></div>
 	<section
 		class="relative isolate mx-auto flex w-[90%] flex-col items-center justify-center gap-10 pb-12 lg:w-[80%] lg:gap-14"
 	>
 		<h2 class="self-start text-4xl font-extralight sm:text-5xl">Exemple de tablouri</h2>
-		<PortofolioSlider />
+		<PortofolioSlider src="../poze-site/tablouri/*" />
 	</section>
 	<Socials display="block" padding="p-8" />
 </Layout>

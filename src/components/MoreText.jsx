@@ -3,7 +3,7 @@ import { useState } from 'react'
 export default function MoreText({ onUpdateReadMore }) {
 	return (
 		<div>
-			<p className="xl:indent-8">
+			<p>
 				Imaginile cu natura în diversele ei manifestări, precum și cele cu oamenii și locurile lor,
 				m-au atras din copilărie când răsfoiam diverse atlasuri și când urmăream la TVR celebra
 				<span className="italic">Teleenciclopedia</span>, iar apoi pasiunea pentru fotografie a
@@ -13,13 +13,13 @@ export default function MoreText({ onUpdateReadMore }) {
 			</p>
 
 			<br />
-			<p className="xl:indent-8">
+			<p>
 				Sunt atras de peisaje, de măreția munților, de misterul pe care-l afișează pădurile și de
 				aceea, prin fotografiile mele, încerc să prezint aceste subiecte așa cum le-am simțit
 				eu...minunate, impresionante, uneori simple, alteori pline de mister sau de povești.
 			</p>
 			<br />
-			<div className="xl:indent-8">
+			<div>
 				Deși sunt orientat de mai mult timp și pe domeniul fotografiei de portret, aici dezvoltarea
 				are loc treptat, pentru că a fotografia oameni implică de multe ori și cunoașterea lor și
 				îmi place să mă concentrez spre surprinderea unor momente care exprimă stări, emoții,
