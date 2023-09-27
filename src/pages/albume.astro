@@ -18,7 +18,7 @@ import Socials from '../components/Socials.astro'
 <Layout title="Albume | Paul Clapa">
 	<Header />
 	<section
-		class="flex flex-col items-center justify-center gap-20 px-7 pt-10 md:pt-16 lg:flex-row xl:pt-20"
+		class="lg-xl:items-center flex flex-col items-center justify-center gap-20 px-7 pt-10 md:pt-16 lg:flex-row lg:items-start xl:pt-20"
 	>
 		<div
 			class="relative w-full max-w-sm shadow-2xl shadow-neutral-950 sm:w-[70%] sm:max-w-lg lg:w-[50%] lg:max-w-md xl:w-[40%] xl:max-w-lg"
@@ -31,7 +31,7 @@ import Socials from '../components/Socials.astro'
 			<Image src={ISaidYesPhoto} class="w-full rounded border-cream" alt="i said yes photo" />
 			<Image
 				src={ChildPhoto}
-				class="absolute -bottom-[85%] left-[70%] hidden w-full rounded border-cream shadow-2xl shadow-neutral-950 lg:block xl:-bottom-[80%]"
+				class="absolute -bottom-[87%] left-[70%] hidden w-full rounded border-cream shadow-2xl shadow-neutral-950 lg:block xl:-bottom-[80%]"
 				alt="i said yes photo"
 			/>
 		</div>
@@ -51,8 +51,8 @@ import Socials from '../components/Socials.astro'
 				class="font-semibold">piele ecologică</span
 			> ori
 			<span class="font-semibold">material textil</span> si nu in ultimul rand, prin folosirea
-			hârtiei profesionale <span class="font-semibold">Fuji Crystal Archive</span> cu textură
-			elegantă sau <span class="font-semibold">Fuji Lustre-mat</span>.
+			hârtiei profesionale <span class="whitespace-nowrap font-semibold">Fuji Crystal Archive</span>
+			 cu textură elegantă sau <span class="whitespace-nowrap font-semibold">Fuji Lustre-mat</span>.
 		</p>
 	</section>
 	<div class="flex w-full justify-center px-7 py-[80px] lg:p-[5%] xl:p-10">
@@ -66,9 +66,7 @@ import Socials from '../components/Socials.astro'
 	<section
 		class="relative isolate mx-auto mt-6 flex w-[90%] flex-col items-center justify-center gap-10 pb-12 lg:w-[80%] lg:gap-14"
 	>
-		<h2 class="self-start text-4xl font-extralight sm:text-5xl">
-			Exemple de pagini ale albumurilor
-		</h2>
+		<h2 class="self-start text-4xl font-extralight sm:text-5xl">Exemple de pagini ale albumelor</h2>
 		<PortofolioSlider src="../poze-site/albume/*" />
 	</section>
 	<Socials display="block" padding="p-8" />
