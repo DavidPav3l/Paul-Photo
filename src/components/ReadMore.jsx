@@ -15,10 +15,10 @@ export default function ReadMore({ children }) {
 						Imaginile cu natura în diversele ei manifestări, precum și cele cu oamenii și locurile
 						lor, m-au atras din copilărie când răsfoiam diverse atlasuri și când urmăream la TVR
 						celebra
-						<span className="italic">Teleenciclopedia</span>, iar apoi pasiunea pentru fotografie a
+						<span class="italic">Teleenciclopedia</span>, iar apoi pasiunea pentru fotografie a
 						început într-o școală...{' '}
 						<button onClick={udateReadMore} type="button" className="font-bold">
-							citeste mai mult
+							citește mai mult
 						</button>
 					</div>
 				) : (
