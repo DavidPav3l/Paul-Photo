@@ -7,6 +7,7 @@ import ISaidYesPhoto from '../assets/familie_portret.jpg'
 import PortofolioSlider from '../components/PortofolioSlider.astro'
 import ChildPhoto from '../assets/poza2-album.jpg'
 import Socials from '../components/Socials.astro'
+import LayoutBebeSafer from '../layouts/LayoutBebeSafer.astro'
 ---
 
 <style>
@@ -15,10 +16,10 @@ import Socials from '../components/Socials.astro'
 	}
 </style>
 
-<Layout title="Albume | Paul Clapa">
+<LayoutBebeSafer title="Albume | Paul Clapa">
 	<Header />
 	<section
-		class="lg-xl:items-center flex flex-col items-center justify-center gap-20 px-7 pt-10 md:pt-16 lg:flex-row lg:items-start xl:pt-20"
+		class="flex flex-col items-center justify-center gap-20 px-7 pt-10 md:pt-16 lg:flex-row lg:items-start lg-xl:items-center xl:pt-20"
 	>
 		<div
 			class="relative w-full max-w-sm shadow-2xl shadow-neutral-950 sm:w-[70%] sm:max-w-lg lg:w-[50%] lg:max-w-md xl:w-[40%] xl:max-w-lg"
@@ -70,4 +71,4 @@ import Socials from '../components/Socials.astro'
 		<PortofolioSlider src="../poze-site/albume/*" />
 	</section>
 	<Socials display="block" padding="p-8" />
-</Layout>
+</LayoutBebeSafer>
