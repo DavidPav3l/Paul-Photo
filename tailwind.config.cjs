@@ -13,6 +13,17 @@ module.exports = {
 			'2xl': '1536px'
 		},
 		extend: {
+			keyframes: {
+				showUp: {
+					'0%': { opacity: 0, transform: 'translateY(25px)' },
+					'100%': { opacity: 1, transform: 'translateY(0)' }
+				}
+			},
+
+			animation: {
+				showUp: 'showUp 2s cubic-bezier(0.25, 1, 0.5, 1) forwards'
+			},
+
 			fontFamily: {
 				MontSerrat: ['Montserrat Variable', 'MontSerrat', 'sans-serif'],
 				SansPro: ['Source Sans Pro', 'sans-serif']
