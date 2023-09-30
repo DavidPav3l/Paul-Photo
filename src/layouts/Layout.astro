@@ -12,7 +12,12 @@ const { title } = Astro.props
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta
+			name="description"
+			content="Salut! Mă numesc Paul Clapa și sunt atras de peisaje, de măreția munților, de misterul pe care-l afișează pădurile și de
+		aceea, prin fotografiile mele, încerc să prezint aceste subiecte așa cum le-am simțit eu...
+		minunate"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -37,7 +42,24 @@ const { title } = Astro.props
 		dotColor: '#f5eddf',
 		dotSize: 10,
 		magnetic: false,
+		zIndex: 100,
 		invert: true,
+		kineticMorphing: false,
+		focusableElements: '[data-blobity-focus], [data-blobity-socials]',
+		radius: 15,
+		focusableElementsOffsetY: 15,
+		focusableElementsOffsetX: 10
+	}
+
+	const optionsBebeSalvator = {
+		size: 40,
+		mode: 'slow',
+		dotColor: '#f5eddf',
+		dotSize: 10,
+		magnetic: false,
+		color: '#f5eddf',
+		zIndex: 100,
+		opacity: 0.5,
 		kineticMorphing: false,
 		focusableElements: '[data-blobity-focus], [data-blobity-socials]',
 		radius: 15,
