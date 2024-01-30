@@ -7,7 +7,7 @@ const albumPhotos = await Astro.glob('../poze-site/albume/*')
 
 {
 	src === '../poze-site/albume/*' ? (
-		<div class="swiper w-full max-w-4xl rounded-lg shadow-2xl shadow-neutral-950">
+		<div class="swiper  w-full max-w-4xl rounded-lg shadow-2xl shadow-neutral-950">
 			<>
 				<div class="swiper-wrapper h-full w-full rounded-lg">
 					{albumPhotos.map((photo) => (
@@ -24,7 +24,7 @@ const albumPhotos = await Astro.glob('../poze-site/albume/*')
 			</>
 		</div>
 	) : (
-		<div class="swiper h-[400px] w-full max-w-4xl rounded-lg shadow-2xl shadow-neutral-950 lg:h-[650px]">
+		<div class="swiper w-full max-w-4xl rounded-lg shadow-2xl shadow-neutral-950">
 			<>
 				<div class="swiper-wrapper h-full w-full rounded-lg">
 					{photos.map((photo) => (
@@ -48,6 +48,7 @@ const albumPhotos = await Astro.glob('../poze-site/albume/*')
 <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script is:inline>
 	new Swiper('.swiper', {
+		autoHeight: true,
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'progressbar'
